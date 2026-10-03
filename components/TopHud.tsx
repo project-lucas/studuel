@@ -10,7 +10,6 @@ import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import XpIcon from '@/components/ui/XpIcon'
 import type { UniteGain } from '@/lib/gains'
-import { GEM_COST_CHAPTER } from '@/lib/gems'
 import { ecouterGains } from '@/lib/hud-gains'
 import { AMIS_MAX, libelleMultiplicateur, multiplicateurXp } from '@/lib/ligue'
 import { PORTRAIT_FACE_CROP } from '@/lib/portraits'
@@ -19,15 +18,24 @@ import {
   isHudAccountHidden,
   isHudHidden,
   isHudOverDarkScene,
-  isHudQuetesMasquee,
   isHudSerieMasquee,
 } from '@/lib/top-hud-routes'
 import PastilleQuetes from '@/components/quetes/PastilleQuetes'
 import { cn } from '@/lib/utils'
 import { compteCourt } from '@/lib/compte-court'
 
-/** Quelle bulle est ouverte, s'il y en a une : les cristaux ou le multiplicateur d'XP. */
-type OpenPurse = 'cristal' | 'multiplicateur' | null
+/** Quelle bulle est ouverte, s'il y en a une : le niveau, les gemmes ou le multiplicateur d'XP. */
+type OpenPurse = 'niveau' | 'cristal' | 'multiplicateur' | null
+
+/** L'XP de l'élève dans son niveau : de quoi dire ce qu'il reste à gagner. */
+export type XpHud = {
+  /** XP cumulée. */
+  actuel: number
+  /** XP où commence le niveau atteint. */
+  plancher: number
+  /** XP où commence le niveau suivant (null : dernier niveau). */
+  prochain: number | null
+}
 
 /**
  * L'avatar de l'élève, déjà résolu par le serveur (lib/avatar-affiche) : le
@@ -56,6 +64,7 @@ export default function TopHud({
   boostXpJusqua = null,
   avatar = null,
   nbAmis = null,
+  xp = null,
 }: {
   /** Solde de gemmes, ou null pour un visiteur non connecté. */
   gems: number | null
@@ -85,6 +94,8 @@ export default function TopHud({
    * 380 : +0,1 par ami, 10 au plus). null : inconnu, il ne s'affiche pas.
    */
   nbAmis?: number | null
+  /** L'XP dans le niveau, pour la bulle « Encore N XP » ; null : inconnue. */
+  xp?: XpHud | null
 }) {
   const pathname = usePathname()
   // La bulle d'explication d'une monnaie (façon Brawl Stars). Une seule ouverte
@@ -100,6 +111,8 @@ export default function TopHud({
   // Le multiplicateur vit dans le bloc de niveau, loin de la bourse : sa boîte
   // est surveillée elle aussi par la fermeture au tap extérieur.
   const multiplicateurRef = useRef<HTMLSpanElement>(null)
+  // Le bloc de niveau (titre + barre) ouvre SA bulle : « Encore N XP ».
+  const niveauRef = useRef<HTMLDivElement>(null)
   // L'écusson encaisse les jetons d'XP : il ne porte pas de nombre, donc il n'a
   // rien à incrémenter — seul le sursaut dit que quelque chose est arrivé. La
   // barre, elle, se remplira au rafraîchissement qui suit la volée.
@@ -119,7 +132,12 @@ export default function TopHud({
 
     const closeOnOutside = (event: PointerEvent) => {
       const cible = event.target as Node
-      if (!pursesRef.current?.contains(cible) && !multiplicateurRef.current?.contains(cible)) closePurse()
+      if (
+        !pursesRef.current?.contains(cible) &&
+        !multiplicateurRef.current?.contains(cible) &&
+        !niveauRef.current?.contains(cible)
+      )
+        closePurse()
     }
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') closePurse()
@@ -149,7 +167,9 @@ export default function TopHud({
   const pct = Math.round(progress * 100)
   // Scène sombre (arène) : les pastilles prennent le verre de nuit du HUD de
   // jeu au lieu du crème des onglets clairs. Un seul matériau par écran.
-  const dark = isHudOverDarkScene(pathname)
+  // L'arène elle-même porte la gélule lavande, comme les onglets clairs
+  // (03/10/2026) : seules ses salles de jeu gardent le verre de nuit.
+  const dark = isHudOverDarkScene(pathname) && pathname !== '/defi'
   // L'engrenage a quitté le bandeau : pour un élève connecté, les réglages ne
   // vivent plus qu'à UN endroit, la carte de profil de l'onglet Moi. Le
   // visiteur, lui, garde la case — chez lui ce n'est pas un engrenage mais un
@@ -229,15 +249,26 @@ export default function TopHud({
                   « Niveau 7 ⚡ ×1,3 » — l'éclair d'XP, puis le multiplicateur
                   qu'on touche pour savoir ce que c'est — et dessous la barre,
                   sur TOUTE la largeur que l'écusson laisse libre. */}
-              <div className="flex min-w-0 flex-1 flex-col gap-1 pr-1">
+              <div ref={niveauRef} className="flex min-w-0 flex-1 flex-col gap-1 pr-1">
                 <div
                   className={cn(
                     'font-heading flex items-center gap-1 text-[13px] leading-none font-extrabold whitespace-nowrap',
                     dark ? 'text-[#faf6ef]' : 'hud-encre',
                   )}
                 >
-                  Niveau {level}
-                  <XpIcon className="size-3.5" />
+                  {/* « Niveau 7 ⚡ » et la barre ouvrent la bulle du niveau :
+                      ce qu'il reste à gagner (Lucas, 03/10/2026 : « si je
+                      clique sur la barre d'XP, rien ne s'affiche »). */}
+                  <button
+                    type="button"
+                    onClick={() => togglePurse('niveau')}
+                    aria-expanded={openPurse === 'niveau'}
+                    aria-controls="bourse-niveau"
+                    className="pointer-events-auto -my-2 flex cursor-pointer items-center gap-1 py-2"
+                  >
+                    Niveau {level}
+                    <XpIcon className="size-3.5" />
+                  </button>
                   {nbAmis !== null ? (
                     <span ref={multiplicateurRef} className="pointer-events-auto flex shrink-0">
                       <MultiplicateurPill
@@ -250,27 +281,45 @@ export default function TopHud({
                     </span>
                   ) : null}
                 </div>
-                <div
-                  className={cn(
-                    'h-1.5 w-full min-w-10 overflow-hidden rounded-full',
-                    dark ? 'bg-black/35 ring-1 ring-white/15' : 'bg-card',
-                  )}
-                  role="progressbar"
-                  aria-label={`Progression vers le niveau ${level + 1}`}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  aria-valuenow={pct}
+                <button
+                  type="button"
+                  onClick={() => togglePurse('niveau')}
+                  aria-label={`Niveau ${level} : ce qu’il reste pour le niveau ${level + 1}`}
+                  className="pointer-events-auto -my-1.5 block w-full cursor-pointer py-1.5"
                 >
-                  <div
+                  <span
                     className={cn(
-                      'h-full rounded-full transition-[width] duration-500',
-                      dark
-                        ? 'bg-gradient-to-r from-highlight to-accent shadow-[0_0_6px_color-mix(in_oklch,var(--highlight),transparent_45%)]'
-                        : 'bg-primary',
+                      'block h-1.5 w-full min-w-10 overflow-hidden rounded-full',
+                      dark ? 'bg-black/35 ring-1 ring-white/15' : 'bg-card',
                     )}
-                    style={{ width: `${pct}%` }}
-                  />
-                </div>
+                    role="progressbar"
+                    aria-label={`Progression vers le niveau ${level + 1}`}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    aria-valuenow={pct}
+                  >
+                    <span
+                      className={cn(
+                        'block h-full rounded-full transition-[width] duration-500',
+                        dark
+                          ? 'bg-gradient-to-r from-highlight to-accent shadow-[0_0_6px_color-mix(in_oklch,var(--highlight),transparent_45%)]'
+                          : 'bg-primary',
+                      )}
+                      style={{ width: `${pct}%` }}
+                    />
+                  </span>
+                </button>
+                {openPurse === 'niveau' ? (
+                  <BulleHud
+                    id="bourse-niveau"
+                    titre={`Niveau ${level}${levelTitle ? ` · ${levelTitle}` : ''}`}
+                    titreClassName={dark ? 'text-highlight' : 'text-primary'}
+                    dark={dark}
+                    pointeClassName="left-24"
+                  >
+                    <BulleNiveau level={level} pct={pct} xp={xp} dark={dark} />
+                  </BulleHud>
+                ) : null}
               </div>
 
               {/* LA SÉRIE, DANS LE BLOC NIVEAU. Elle avait sa propre pastille,
@@ -341,19 +390,17 @@ export default function TopHud({
                   >
                     <ResourcePill
                       unite="gemme"
-                      name="Cristal"
+                      name="Gemmes"
                       nameClassName={dark ? 'text-[#c9b4ff]' : 'text-primary'}
-                      description={
-                        <>
-                          La monnaie du contenu. {GEM_COST_CHAPTER} cristaux ouvrent
-                          un chapitre entier — sa fiche et ses fiches de révision — pour
-                          toujours. Ils se gagnent surtout en invitant tes amis.
-                        </>
-                      }
+                      // Deux phrases (Lucas, 03/10/2026 : « une bulle avec
+                      // beaucoup trop de texte, et elle s'affiche à gauche »).
+                      description={<>Elles ouvrent les fiches et les capsules. Tu en gagnes avec les quêtes et tes amis.</>}
                       open={openPurse === 'cristal'}
                       onToggle={() => togglePurse('cristal')}
-                      label={(n) => `${n} cristaux — à quoi sert cette monnaie`}
-                      plusLabel="Obtenir des cristaux"
+                      label={(n) => `${n} gemmes — à quoi elles servent`}
+                      plusLabel="Obtenir des gemmes"
+                      aDroite
+                      pointeClassName="right-10"
                       value={gems}
                       icon={<CristalIcon className="size-5" />}
                       dark={dark}
@@ -401,7 +448,7 @@ export default function TopHud({
       {/* LES QUÊTES DU JOUR (03/10/2026) : le parchemin et « 1/3 », au bord
           droit — sauf sur l'accueil Réviser (la puce de classe y tient le
           bord, les quêtes sont une carte en tête de page) et sur l'arène. */}
-      {connected && !isHudQuetesMasquee(pathname) ? (
+      {connected ? (
         <div className="ml-auto flex shrink-0 items-center">
           <PastilleQuetes dark={dark} />
         </div>
@@ -542,6 +589,7 @@ function ResourcePill({
   dark,
   className,
   pointeClassName = 'right-6',
+  aDroite = false,
 }: {
   /** L'unité que cette pastille compte — c'est elle qui reçoit les jetons. */
   unite: UniteGain
@@ -562,6 +610,8 @@ function ResourcePill({
   className: string
   /** Où tombe la pointe de la bulle, depuis le bord droit de l'écusson. */
   pointeClassName?: string
+  /** La bulle se cale au bord DROIT de l'écusson, sous la pastille. */
+  aDroite?: boolean
 }) {
   const panelId = `bourse-${name.toLowerCase()}`
   const { delta, ref } = useEncaissement(unite, value)
@@ -600,6 +650,7 @@ function ResourcePill({
           titreClassName={nameClassName}
           dark={dark}
           pointeClassName={pointeClassName}
+          aDroite={aDroite}
         >
           <p>{description}</p>
           {/* LE CHEMIN VERS LA BOUTIQUE, en toutes lettres.
@@ -625,6 +676,34 @@ function ResourcePill({
 }
 
 /**
+ * Ce que dit la bulle du niveau : où l'on en est en XP, et ce qu'il reste à
+ * gagner. Une barre de 0 % n'est pas une panne : c'est un niveau tout juste
+ * atteint, et la bulle le dit en chiffres.
+ */
+function BulleNiveau({ level, pct, xp, dark }: { level: number; pct: number; xp: XpHud | null; dark: boolean }) {
+  if (!xp || xp.prochain === null) {
+    return <p>{xp ? 'Tu as atteint le dernier niveau.' : `${pct} % du chemin vers le niveau ${level + 1}.`}</p>
+  }
+  const reste = Math.max(0, xp.prochain - xp.actuel)
+  const fait = Math.max(0, xp.actuel - xp.plancher)
+  const palier = Math.max(1, xp.prochain - xp.plancher)
+  return (
+    <>
+      <p className="font-heading flex items-center gap-1 text-base font-extrabold">
+        <XpIcon className="size-4" />
+        <span className={dark ? 'text-[#faf6ef]' : 'hud-encre'}>
+          Encore {reste.toLocaleString('fr-FR')} XP
+        </span>
+      </p>
+      <p>pour passer au niveau {level + 1}.</p>
+      <p className="mt-1.5 tabular-nums">
+        {fait.toLocaleString('fr-FR')} / {palier.toLocaleString('fr-FR')} XP dans ce niveau
+      </p>
+    </>
+  )
+}
+
+/**
  * La bulle d'explication d'une pastille du bandeau (façon Brawl Stars) :
  * ancrée sous l'ÉCUSSON (l'ancêtre positionné), calée à son bord gauche pour
  * rester dans l'écran, la pointe sous la pastille qui l'a ouverte. Elle sort
@@ -636,6 +715,7 @@ function BulleHud({
   titreClassName,
   dark,
   pointeClassName,
+  aDroite = false,
   children,
 }: {
   id: string
@@ -643,13 +723,16 @@ function BulleHud({
   titreClassName: string
   dark: boolean
   pointeClassName: string
+  /** Calée au bord droit de l'écusson plutôt qu'au gauche. */
+  aDroite?: boolean
   children: ReactNode
 }) {
   return (
     <div
       id={id}
       className={cn(
-        'absolute top-full left-0 z-10 mt-2 w-60 rounded-2xl p-3 text-left font-sans text-xs leading-relaxed shadow-xl',
+        'absolute top-full z-10 mt-2 w-60 rounded-2xl p-3 text-left font-sans text-xs leading-relaxed shadow-xl',
+        aDroite ? 'right-0' : 'left-0',
         dark
           ? 'olympe-glass olympe-glass--sculpte text-[#ece5f7]'
           : 'bg-card text-foreground/80 ring-1 ring-black/10 backdrop-blur-md',

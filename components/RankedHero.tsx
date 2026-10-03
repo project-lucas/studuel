@@ -1,7 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import { Trophy, Swords, ChevronUp, ChevronDown, Crown } from 'lucide-react'
+import { Swords, ChevronUp, ChevronDown, Crown } from 'lucide-react'
+import TropheeIcone from '@/components/ui/TropheeIcone'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import {
@@ -132,7 +133,7 @@ export default function RankedHero({
             </span>
             <span className="flex shrink-0 items-center gap-1 font-mono text-xs font-bold text-primary tabular-nums">
               +{ahead.trophies - trophies}
-              <Trophy className="size-3 text-highlight" aria-hidden="true" />
+              <TropheeIcone className="size-3.5" />
             </span>
           </div>
         ) : friendCount > 0 ? (
@@ -169,7 +170,7 @@ export default function RankedHero({
                 </span>
                 <span className="flex shrink-0 items-center gap-1 font-mono text-xs font-bold tabular-nums">
                   {r.trophies}
-                  <Trophy className="size-3 text-highlight" aria-hidden="true" />
+                  <TropheeIcone className="size-3.5" />
                 </span>
               </li>
             ))}

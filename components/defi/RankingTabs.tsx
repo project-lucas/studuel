@@ -3,7 +3,8 @@
 import { useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import type { RankingBoard, RankingEntry, RankingScope } from '@/lib/defi/types'
-import { ChevronRight, Trophy } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
+import TropheeIcone from '@/components/ui/TropheeIcone'
 import { useTablist } from '@/components/useTablist'
 
 interface RankingTabsProps {
@@ -164,11 +165,7 @@ function EntryRow({ entry }: { entry: RankingEntry }) {
           controlait pas. */}
       <span className="flex shrink-0 items-center gap-1 text-sm font-extrabold text-white tabular-nums">
         {entry.scoreLabel}
-        <Trophy
-          className="size-3.5 text-highlight"
-          strokeWidth={2.4}
-          aria-hidden="true"
-        />
+        <TropheeIcone className="size-4" />
       </span>
     </li>
   )

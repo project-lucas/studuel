@@ -1,7 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { Check, Trophy } from 'lucide-react'
+import { Check } from 'lucide-react'
+import TropheeIcone from '@/components/ui/TropheeIcone'
 import { cn } from '@/lib/utils'
 import { carteBilan, type MouvementTrophees } from '@/lib/jeux/bilan-carte'
 import type { BilanPartie } from '@/lib/palmares/bilan'
@@ -90,10 +91,7 @@ export default function CarteBilan({
             )}
             aria-label={`Trophées : ${carte.pastille.texte}`}
           >
-            <Trophy
-              className={cn('size-4', gain && 'fill-highlight text-highlight')}
-              aria-hidden="true"
-            />
+            <TropheeIcone className="size-4" />
             {carte.pastille.texte}
           </span>
         ) : null}

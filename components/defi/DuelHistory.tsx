@@ -4,7 +4,8 @@ import {
   dayLabelFr,
   type DuelHistoryEntry,
 } from '@/lib/defi/history'
-import { ChevronRight, Swords, Trophy } from 'lucide-react'
+import { ChevronRight, Swords } from 'lucide-react'
+import TropheeIcone from '@/components/ui/TropheeIcone'
 
 interface DuelHistoryProps {
   entries: DuelHistoryEntry[]
@@ -85,7 +86,7 @@ export default function DuelHistory({
                 {e.delta >= 0 ? `+${e.delta}` : e.delta}
               </span>
               <span className="flex shrink-0 items-center gap-1 text-xs font-bold text-white/60 tabular-nums">
-                <Trophy className="size-3.5 text-highlight" strokeWidth={2.4} aria-hidden="true" />
+                <TropheeIcone className="size-4" />
                 {e.trophies}
               </span>
             </li>

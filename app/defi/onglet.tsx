@@ -38,8 +38,6 @@ import { getChapterMastery } from '@/lib/mastery-server'
 import { fetchAreneVague1 } from '@/lib/arene-vague1'
 import { reviewQueue } from '@/lib/srs'
 import ClanBanner from '@/components/defi/ClanBanner'
-import ProfileChip from '@/components/defi/ProfileChip'
-import { getProfileData } from '@/app/defi/profile-actions'
 import DuelHistory from '@/components/defi/DuelHistory'
 import SchoolTournament from '@/components/defi/SchoolTournament'
 import {
@@ -83,8 +81,6 @@ import {
   type School,
 } from '@/lib/clan'
 import { clanWeekReward, type ClanWeekBoard } from '@/lib/clan-week'
-import { fetchGems } from '@/lib/gems-access'
-import { lireFinBoostXp } from '@/lib/boutique/boosts-server'
 import {
   lastWeekKey,
 } from '@/lib/clan-week-server'
@@ -197,14 +193,9 @@ export default async function OngletDefi() {
   let onlineFriendName: string | undefined
   let clanWeek: ClanWeekBoard | null = null
   let clanReward: { weekKey: string; label: string } | null = null
-  // LA SÉRIE ET LES CRISTAUX, portés par la carte du joueur (Lucas, 17/09/2026 :
-  // « assemble ces trois blocs en un seul »). Le bandeau du haut (TopHud) se
-  // masque sur /defi ; c'est donc la page qui lit ces deux compteurs, comme le
-  // fait TopHudLoader ailleurs. `null` = visiteur ou base sans la RPC.
-  let gems: number | null = null
-  let streak: number | null = null
-  // Le Boost XP du Marché qui court : « ×2 XP » contre le niveau de la carte.
-  let boostXpJusqua: string | null = null
+  // Série, gemmes, niveau, boost et multiplicateur ne se lisent plus ici : la
+  // carte du joueur est partie le 03/10/2026, le bandeau du haut (TopHudLoader)
+  // les porte sur l'arène comme ailleurs.
   // LA TRAQUE (212) : une jauge par matière, remplie en révisant. Vide tant que
   // la migration n'est pas passée — la tuile Boss affiche alors une carte
   // d'invitation à réviser, jamais une erreur.
@@ -213,25 +204,10 @@ export default async function OngletDefi() {
   // Une demande en attente est un dû, comme un coffre — elle doit se voir
   // depuis l'arène, pas seulement en ouvrant l'onglet Amis.
   let friendRequests = 0
-  // Amis acceptés : le multiplicateur d'XP de la carte du joueur (lib/ligue,
-  // migration 380). null tant que la liste n'a pas répondu — pas de « ×1,0 »
-  // inventé.
-  let nbAmis: number | null = null
   // Abonné Studuel+ ? Décide de la pastille d'appel du HUD. `false` par défaut :
   // un visiteur non connecté est justement la cible du message.
   let isPremium = false
 
-  // LE PROFIL DE JEU PART MAINTENANT, en même temps que les vagues de l'arène.
-  // Il ne dépend que de l'élève, pas des classements ni du chapitre, mais il
-  // était attendu APRÈS eux : ses propres allers-retours (attribution des
-  // badges, puis stats, puis bannières, puis école) s'ajoutaient bout à bout à
-  // ceux de la page — sept vagues en file indienne, ~400 ms de serveur pour
-  // l'écran d'accueil. Lancé ici, il court en parallèle et la page ne l'attend
-  // qu'au moment de dessiner la carte. Le `catch` vide ne masque rien : la
-  // promesse est bien attendue plus bas, et son erreur y est relancée — il
-  // évite seulement un « rejet non géré » si la page échoue avant d'y arriver.
-  const profileDataPromise = user ? getProfileData() : Promise.resolve(null)
-  profileDataPromise.catch(() => {})
 
   if (user) {
     // Semaine écoulée : borne du coffre de clan, connue sans aucune requête.
@@ -303,9 +279,6 @@ export default async function OngletDefi() {
       vague1,
       catalogSubjects,
       quizMastery,
-      gemsRes,
-      streakRes,
-      boostXpRes,
       subjectLevels,
       palmaresRes,
       [schoolRes, tournamentRes, chapterRes, quizCounts, gradeChapters],
@@ -313,10 +286,6 @@ export default async function OngletDefi() {
       vague1P,
       getSubjectsCached(),
       masteryP,
-      fetchGems(supabase, user.id),
-      // La RPC `my_streak` (migration 155) : tolérante, comme dans TopHudLoader.
-      supabase.rpc('my_streak'),
-      lireFinBoostXp(supabase, user.id),
       // Couples (matière, niveau) ayant du contenu (cache serveur, gratuit) :
       // ils disent quelles matières ont VRAIMENT de quoi réviser — une matière
       // vide n'aurait pas de gardien à traquer, sa jauge serait un cul-de-sac.
@@ -328,12 +297,6 @@ export default async function OngletDefi() {
       fetchMyPalmares(supabase),
       selonClasseP,
     ])
-    gems = gemsRes
-    boostXpJusqua = boostXpRes
-    if (!streakRes.error && streakRes.data != null) {
-      const n = Number(streakRes.data)
-      streak = Number.isFinite(n) ? Math.max(0, n) : null
-    }
 
     const {
       profile,
@@ -364,7 +327,6 @@ export default async function OngletDefi() {
       Array.isArray(overviewRes.data) ? overviewRes.data : [],
     )
     friendRequests = apercuAmis.incoming.length
-    nbAmis = Array.isArray(overviewRes.data) ? apercuAmis.accepted.length : null
     // Le cycle vient de la base quand la 322 est là (elle le calcule au moment
     // où elle lit le profil) : c'est lui qui obligeait à une SECONDE vague,
     // pour une donnée que Postgres avait déjà sous la main. Repli sur la règle
@@ -492,11 +454,6 @@ export default async function OngletDefi() {
       }
     }
   }
-
-  // Profil de jeu (carte haut-gauche) : agrégation stats + badges + cosmétiques,
-  // lancée tout en haut de la page. Null pour un visiteur non connecté (pas de
-  // carte). Attribue au passage les badges mérités (recalcul serveur).
-  const profileData = await profileDataPromise
 
   // LE BURGER — la porte unique du second rang, façon Clash Royale. La colonne
   // droite portait une cartouche de rang, une grappe de deux objets ET un
@@ -638,16 +595,6 @@ export default async function OngletDefi() {
       ? `${traqueLead.percent} %`
       : undefined
   const leftTiles: RailTile[] = [
-    ...(user
-      ? [
-          {
-            id: 'quetes',
-            label: 'Quêtes du jour',
-            image: '/images/defi/icones/quetes-v3.webp',
-            ouvreQuetes: true,
-          } satisfies RailTile,
-        ]
-      : []),
     // La tuile disparaît tant que la migration 212 n'est pas exécutée
     // (traqueBoard vide) : mieux vaut pas de tuile qu'une carte de jauges qui
     // ne monteraient jamais.
@@ -741,18 +688,6 @@ export default async function OngletDefi() {
                 trophees={user ? trophies : undefined}
                 classement={classementNational}
               />
-            }
-            profileSlot={
-              profileData ? (
-                <ProfileChip
-                  key="profil"
-                  data={profileData}
-                  gems={gems}
-                  streak={streak}
-                  boostXpJusqua={boostXpJusqua}
-                  nbAmis={nbAmis}
-                />
-              ) : null
             }
           >
             <ArenaHero />

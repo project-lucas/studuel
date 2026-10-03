@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
 import AvatarRender from '@/components/avatar/AvatarRender'
-import TropheeAnime from '@/components/amis/TropheeAnime'
+import TropheeIcone from '@/components/ui/TropheeIcone'
 import type { AvatarConfig } from '@/lib/avatar'
 import { cn } from '@/lib/utils'
 import styles from './Course.module.css'
@@ -124,7 +124,7 @@ function Fiche({ camp, tone, label }: { camp: VsCamp; tone: 'moi' | 'rival'; lab
       </div>
       <p className="course-vs-nom">{label}</p>
       <p className="course-vs-trophees">
-        <TropheeAnime className="size-4" /> {camp.trophies}
+        <TropheeIcone className="size-4" /> {camp.trophies}
       </p>
       <p className="course-vs-legende">{camp.caption}</p>
     </div>

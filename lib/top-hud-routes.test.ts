@@ -5,7 +5,6 @@ import {
   isHudHidden,
   isHudLevelHidden,
   isHudOverDarkScene,
-  isHudQuetesMasquee,
   isHudSerieMasquee,
 } from './top-hud-routes'
 
@@ -21,9 +20,8 @@ describe('isHudHidden', () => {
     }
   })
 
-  it('le masque sur l’arène, dont la carte du joueur porte série et cristaux', () => {
-    expect(isHudHidden('/defi')).toBe(true)
-    // Les salles de jeu n'ont pas la carte : elles gardent le bandeau.
+  it('le montre sur l’arène, qui a rendu sa carte du joueur (03/10/2026)', () => {
+    expect(isHudHidden('/defi')).toBe(false)
     expect(isHudHidden('/defi/jouer')).toBe(false)
     expect(isHudHidden('/defi/jeux/capitales')).toBe(false)
   })
@@ -120,18 +118,5 @@ describe('isHudSerieMasquee', () => {
     expect(isHudSerieMasquee('/reviser/maths')).toBe(false)
     expect(isHudSerieMasquee('/amis')).toBe(false)
     expect(isHudSerieMasquee('/tresor')).toBe(false)
-  })
-})
-
-describe('isHudQuetesMasquee', () => {
-  it('laisse la place à la tuile Quêtes sur l’arène', () => {
-    expect(isHudQuetesMasquee('/defi')).toBe(true)
-  })
-
-  it('montre les quêtes partout ailleurs, accueil Réviser compris', () => {
-    expect(isHudQuetesMasquee('/reviser')).toBe(false)
-    expect(isHudQuetesMasquee('/reviser/maths')).toBe(false)
-    expect(isHudQuetesMasquee('/amis')).toBe(false)
-    expect(isHudQuetesMasquee('/moi')).toBe(false)
   })
 })

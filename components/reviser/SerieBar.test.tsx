@@ -65,12 +65,12 @@ describe('SerieBar — la validation du jour', () => {
     const mardi = screen.getByRole('img', { name: /mardi 22 — fait/ })
     // Rien tant que le premier écran n'est pas peint : la coche est posée, la
     // vague fait son travail, le marqueur n'est pas écrit.
-    expect(mardi.className).toContain('wave-in')
+    expect(mardi.className).toContain('vague')
     expect(window.localStorage.getItem(CLE)).toBeNull()
 
     await scenePrete()
     expect(mardi.className).toContain('jour-valide')
-    expect(mardi.className).not.toContain('wave-in')
+    expect(mardi.className).not.toContain('vague')
     expect(mardi.querySelector('.jour-valide-onde')).not.toBeNull()
     expect(correct).toHaveBeenCalledTimes(1)
     expect(window.localStorage.getItem(CLE)).toBe('1')
@@ -83,7 +83,7 @@ describe('SerieBar — la validation du jour', () => {
     })
     await scenePrete()
     const mardi = screen.getByRole('img', { name: /mardi 22 — fait/ })
-    expect(mardi.className).toContain('wave-in')
+    expect(mardi.className).toContain('vague')
     expect(mardi.className).not.toContain('jour-valide')
     expect(mardi.querySelector('.jour-valide-onde')).toBeNull()
     expect(correct).not.toHaveBeenCalled()

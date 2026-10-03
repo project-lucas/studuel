@@ -1,7 +1,5 @@
 import { notFound } from 'next/navigation'
 import TopHud, { type AvatarHud } from '@/components/TopHud'
-import ProfileChip from '@/components/defi/ProfileChip'
-import type { ProfileData } from '@/app/defi/profile-actions'
 import { avatarDataUri, DEFAULT_AVATAR } from '@/lib/avatar'
 import { portraitSrc } from '@/lib/portraits'
 import { SemeurQuetes } from '../quetes/ApercuQuetes'
@@ -15,26 +13,10 @@ export const dynamic = 'force-dynamic'
 // dans un cadre `transform` : son `position: fixed` s'y rattache, au lieu de
 // se coller en haut de l'écran par-dessus celui du visiteur.
 //
-// En bas, la carte du joueur de l'arène (ProfileChip), qui porte le même
-// multiplicateur d'XP sur le verre de nuit.
-//
 //   /dev/bandeau   (avec la pastille des quêtes du jour, semée par SemeurQuetes)
 
 const BLASON: AvatarHud = { src: portraitSrc('7'), visage: true }
 const COMPOSE: AvatarHud = { src: avatarDataUri(DEFAULT_AVATAR, 72), visage: false }
-
-/** Juste ce que lit la carte fermée ; la modale de profil n'est pas ouverte ici. */
-const JOUEUR = {
-  displayName: 'Sacha',
-  avatar: DEFAULT_AVATAR,
-  summary: { totalXp: 730 },
-} as unknown as ProfileData
-
-const CAS_ARENE: { titre: string; nbAmis: number; boost?: boolean }[] = [
-  { titre: 'Arène : 3 amis (×1,3)', nbAmis: 3 },
-  { titre: 'Arène : sans ami (×1,0)', nbAmis: 0 },
-  { titre: 'Arène : potion d’XP, 3 amis (×2,6)', nbAmis: 3, boost: true },
-]
 
 const CAS: {
   titre: string
@@ -71,6 +53,7 @@ export default async function ApercuBandeauPage() {
               level={7}
               levelTitle="Apprenti"
               progress={0.45}
+              xp={{ actuel: 2440, plancher: 2100, prochain: 2800 }}
               userLabel="Sacha"
               boostXpJusqua={c.boost ? dansUneHeure : null}
               avatar={c.avatar}
@@ -79,20 +62,6 @@ export default async function ApercuBandeauPage() {
           </div>
         </section>
       ))}
-      <div className="flex flex-col gap-3 bg-[color:var(--carte-sombre-fond)] px-4 py-4">
-        {CAS_ARENE.map((c) => (
-          <section key={c.titre}>
-            <p className="pb-1 text-xs font-bold text-white/70">{c.titre}</p>
-            <ProfileChip
-              data={JOUEUR}
-              gems={40}
-              streak={3}
-              nbAmis={c.nbAmis}
-              boostXpJusqua={c.boost ? dansUneHeure : null}
-            />
-          </section>
-        ))}
-      </div>
     </div>
   )
 }

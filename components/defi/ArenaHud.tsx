@@ -8,12 +8,11 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
-import { menuAlertCount, questTileBadge } from '@/lib/arene-hud'
+import { menuAlertCount } from '@/lib/arene-hud'
 import { useDialogFocus } from '@/lib/use-dialog'
 import SheetShell from './SheetShell'
 import { NotificationBadge } from './SculptedPlate'
 import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
-import { ouvrirFeuilleQuetes, useQuetesDuJour } from '@/components/quetes/store'
 
 /**
  * Une entrée du menu burger. Deux comportements exclusifs :
@@ -83,9 +82,6 @@ export interface RailTile {
   href?: string
   sheetTitle?: string
   sheetContent?: ReactNode
-  /** Ouvre LA feuille des quêtes du jour (components/quetes) ; sa pastille
-   *  se lit dans le magasin des quêtes, pas dans `badge`. */
-  ouvreQuetes?: boolean
 }
 
 interface ArenaHudProps {
@@ -115,14 +111,6 @@ interface ArenaHudProps {
    * Route des trophées (ClassementSheet).
    */
   classementSlot?: ReactNode
-  /**
-   * LA CARTE DU JOUEUR, calée dans l'ANGLE haut-gauche (façon Clash Royale) :
-   * avatar, nom, série et cristaux, puis la barre de niveau et la barre de
-   * trophées. Depuis le 17/09/2026 elle porte SEULE tout le haut-gauche — le
-   * bandeau du haut (TopHud) se masque sur l'arène et la bande de saison a
-   * été retirée.
-   */
-  profileSlot?: ReactNode
   /** Le centre de la scène (la scène du héros, calée en bas). */
   children?: ReactNode
 }
@@ -151,11 +139,14 @@ interface ArenaHudProps {
  * une seule porte.
  */
 /**
- * Le haut du HUD : la bande vide au-dessus des monnaies, comme chez Clash
- * Royale — 2,5 rem, ou l'encoche du téléphone plus une demi-marge si elle
- * est plus haute. Les deux colonnes et le menu ouvert partagent la cote.
+ * Le haut du HUD : JUSTE SOUS LE BANDEAU (03/10/2026). L'arène a rendu sa
+ * carte du joueur sombre : la gélule lavande du bandeau (niveau, série,
+ * gemmes, quêtes) court tout en haut, comme sur les autres onglets, et les deux
+ * colonnes de l'arène — trophées et missions à gauche, burger, Studuel+ et
+ * Classement à droite — commencent dessous. Les colonnes et le menu ouvert
+ * partagent la cote.
  */
-const HUD_TOP = 'top-[max(2.5rem,calc(env(safe-area-inset-top)+0.5rem))] md:top-8'
+const HUD_TOP = 'top-[calc(env(safe-area-inset-top)+4rem)] md:top-8'
 
 export default function ArenaHud({
   leftTiles = [],
@@ -163,7 +154,6 @@ export default function ArenaHud({
   premiumSlot,
   tropheesSlot,
   classementSlot,
-  profileSlot,
   children,
 }: ArenaHudProps) {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -299,20 +289,15 @@ export default function ArenaHud({
           l'angle quel que soit le format ; sur desktop, après la barre
           latérale (md:left-56). */}
       <div className={cn('fixed left-3 z-40 flex flex-col items-start gap-2.5 md:left-56', HUD_TOP)}>
-        {profileSlot}
         {tropheesSlot}
 
         {/* Le rail des missions, le long de la scène — une COLONNE régulière :
             même plaque, même écart. */}
         {leftTiles.length > 0 ? (
           <div className="mt-1 flex flex-col items-center gap-3">
-            {leftTiles.map((tile) =>
-              tile.ouvreQuetes ? (
-                <TuileQuetes key={tile.id} tile={tile} />
-              ) : (
-                <RailTileFace key={tile.id} tile={tile} onOpen={openSheet} />
-              ),
-            )}
+            {leftTiles.map((tile) => (
+              <RailTileFace key={tile.id} tile={tile} onOpen={openSheet} />
+            ))}
           </div>
         ) : null}
       </div>
@@ -425,33 +410,6 @@ export default function ArenaHud({
  * deux robes pour un même geste (ouvrir quelque chose), et des dessins de 36 px
  * qui perdaient leur cerne. Une seule matière, un seul format.
  */
-/**
- * La tuile Quêtes du rail : elle ouvre la feuille des quêtes de toute l'app,
- * et sa pastille dit le dû (corail) ou le reste à faire (violet), d'après le
- * magasin que relit le bandeau (lib/arene-hud.questTileBadge).
- */
-function TuileQuetes({ tile }: { tile: RailTile }) {
-  const etat = useQuetesDuJour()
-  const badge = etat
-    ? questTileBadge(
-        etat.quetes.map((q) => ({ id: q.id, done: q.done })),
-        etat.encaissees,
-      )
-    : null
-  const faites = etat ? etat.quetes.filter((q) => q.done).length : 0
-  return (
-    <RailTileFace
-      tile={{
-        ...tile,
-        label: etat ? `Quêtes du jour — ${faites} sur ${etat.quetes.length} faites` : tile.label,
-        badge: badge ? String(badge.count) : undefined,
-        badgeTone: badge?.tone,
-      }}
-      onOpen={() => ouvrirFeuilleQuetes()}
-    />
-  )
-}
-
 function RailTileFace({
   tile,
   onOpen,

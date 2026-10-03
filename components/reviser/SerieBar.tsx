@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState, type ReactNode } from 'react'
-import { CalendarDays, Check, Plus } from 'lucide-react'
+import { CalendarDays, Plus } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { quandLaScenePrete } from '@/lib/scene-prete'
@@ -13,6 +13,7 @@ import AddExamSheet, {
   type ChapterLite,
 } from '@/components/AddExamSheet'
 import { addDays, type Controle, type ControleSubjectMeta } from '@/lib/prep-plan'
+import semaine from './SemaineSerie.module.css'
 
 // Jours de la semaine, lundi → dimanche (index 0 = lundi, cf. lib/streak). Trois
 // lettres à l'écran : fini le « L M M J V S D » où l'on devine quel M est mardi.
@@ -271,42 +272,35 @@ export default function SerieBar({
                 aria-label={`${DAY_FULL[i]} ${dayNum}${
                   d.done ? ' — fait' : d.isToday ? " — aujourd'hui" : ''
                 }${exam ? ` — contrôle de ${exam.name}` : ''}`}
-                // Le décalage de la vague suit le RANG DU JOUR, pas celui des
-                // jours faits : un trou au milieu de la semaine se voit, la
-                // vague passe par-dessus sans se resserrer. 50 ms entre deux
-                // jours : la semaine entière se remplit en un tiers de seconde,
-                // on lit un mouvement et non sept apparitions successives.
-                style={d.done ? { animationDelay: `${i * 50}ms` } : undefined}
+                // LA VAGUE suit le RANG DU JOUR, pas celui des jours faits : un
+                // trou au milieu de la semaine se voit, la vague passe
+                // par-dessus sans se resserrer. 70 ms entre deux jours.
+                style={d.done ? { animationDelay: `${i * 70}ms` } : undefined}
                 className={cn(
-                  'relative flex size-8 items-center justify-center rounded-full transition',
+                  semaine.jour,
                   d.done
                     ? cn(
-                        'bg-primary text-primary-foreground',
+                        semaine.fait,
                         // Le jour qui vient d'être validé se retourne au lieu
                         // d'arriver par la vague : une animation par élément.
-                        d.isToday && validation ? 'jour-valide' : 'wave-in',
+                        d.isToday && validation ? 'jour-valide' : semaine.vague,
                       )
-                    : d.isFuture
-                      ? 'bg-muted'
-                      : 'bg-muted ring-1 ring-black/[0.06] ring-inset',
-                  d.isToday && 'ring-2 ring-primary ring-offset-2',
+                    : d.isToday
+                      ? semaine.aujourdhui
+                      : d.isFuture
+                        ? semaine.avenir
+                        : semaine.manque,
                 )}
               >
-                {/* L'ONDE DU JOUR EN COURS. L'anneau violet le distinguait des
-                    six autres, mais immobile au milieu de six pastilles grises
-                    il était présent sans être trouvé. Une onde s'en écarte
-                    toutes les deux secondes et demie : c'est le seul mouvement
-                    de la barre, donc l'œil y va.
-
-                    Elle est POSÉE PAR-DESSOUS (`-z-10`) et déborde (`-inset-1`)
-                    : elle ne doit ni recouvrir la coche, ni intercepter un tap.
-                    Le jour reste marqué par son anneau quand le mouvement est
-                    réduit — un halo ne porte jamais seul une information. */}
-                {d.isToday ? (
-                  <span
-                    aria-hidden="true"
-                    className="jour-onde pointer-events-none absolute -inset-1 -z-10 rounded-full ring-2 ring-primary"
-                  />
+                {/* AUJOURD'HUI, PAS ENCORE FAIT : un anneau en pointillés qui
+                    tourne lentement autour d'un point violet — la journée est
+                    « en cours », c'est le seul mouvement de la barre. Il
+                    disparaît dès que la journée est faite. */}
+                {d.isToday && !d.done ? (
+                  <>
+                    <span aria-hidden="true" className={semaine.anneau} />
+                    <span aria-hidden="true" className={semaine.pointCentre} />
+                  </>
                 ) : null}
                 {/* L'onde de la validation : elle ne vit que le temps de son
                     animation, sur le seul jour qui vient d'être fait. */}
@@ -316,8 +310,20 @@ export default function SerieBar({
                     className="jour-valide-onde pointer-events-none absolute inset-0 rounded-full ring-2 ring-primary"
                   />
                 ) : null}
+                {/* La coche se TRACE juste après l'arrivée du jeton. */}
                 {d.done ? (
-                  <Check className="size-4" strokeWidth={3.4} aria-hidden="true" />
+                  <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    className={cn('size-4.5', semaine.coche)}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={3.4}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M5 12.5 10 17.5 19 7" style={{ animationDelay: `${i * 70 + 280}ms` }} />
+                  </svg>
                 ) : null}
               </span>
 

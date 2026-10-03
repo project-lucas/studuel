@@ -2,7 +2,7 @@ import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { computeXp, levelFor } from '@/lib/xp'
-import { walletLevelInfo } from '@/lib/wallet'
+import { walletLevelInfo, xpForLevel } from '@/lib/wallet'
 import { activityCutoff } from '@/lib/streak'
 import { isHudDataSkipped } from '@/lib/top-hud-routes'
 import { fetchGems } from '@/lib/gems-access'
@@ -130,6 +130,7 @@ export default async function TopHudLoader() {
         level={info.level}
         levelTitle={info.title}
         progress={info.progress}
+        xp={{ actuel: info.currentXp, plancher: xpForLevel(info.level), prochain: info.nextAt }}
         userLabel={userLabel}
         boostXpJusqua={boostXpJusqua}
         avatar={avatar}

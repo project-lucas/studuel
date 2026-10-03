@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { RefreshCw, RotateCcw, Shuffle, Users } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import AvatarRender from '@/components/avatar/AvatarRender'
-import TropheeAnime from '@/components/amis/TropheeAnime'
+import TropheeIcone from '@/components/ui/TropheeIcone'
 import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
 import type { AvatarConfig } from '@/lib/avatar'
 import { cn } from '@/lib/utils'
@@ -125,13 +125,13 @@ export default function DuelResult({
         <div className="course-fin-trophees" aria-live="polite">
           {!recorded ? (
             <span className={styles.attente}>
-              <TropheeAnime className="size-6" />
+              <TropheeIcone className="size-6" />
               Le serveur compte les trophées…
             </span>
           ) : trophies ? (
             <>
               <span className={cn('course-fin-delta', trophies.delta >= 0 ? 'course-fin-delta--plus' : 'course-fin-delta--moins')}>
-                <TropheeAnime className="size-6" />
+                <TropheeIcone className="size-6" />
                 {trophies.delta >= 0 ? '+' : ''}
                 {trophies.delta}
               </span>

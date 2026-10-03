@@ -30,21 +30,14 @@ export function estOngletMoi(pathname: string): boolean {
   return pathname === '/moi'
 }
 
-/**
- * L'ARÈNE N'A PLUS DE BANDEAU NON PLUS (Lucas, 17/09/2026 : « assemble ces
- * trois blocs en un seul bloc placé en haut à gauche »). La carte du joueur de
- * /defi porte désormais l'avatar, la série, les cristaux, la barre de niveau
- * et la barre de trophées : la bande de ressources du bandeau, à droite, les
- * redisait. Exactement `/defi` : les salles de jeu gardent leur bandeau.
- */
-export function estArene(pathname: string): boolean {
-  return pathname === '/defi'
-}
 
 /** Le bandeau du haut doit-il être masqué sur ce chemin ? */
 export function isHudHidden(pathname: string): boolean {
   return (
-    estChromeMasque(pathname) || estOngletMoi(pathname) || estArene(pathname)
+    // L'ARÈNE A RETROUVÉ LE BANDEAU le 03/10/2026 (Lucas : la carte du joueur
+    // sombre est remplacée « proprement » par la gélule lavande) : elle n'est
+    // plus dans cette liste.
+    estChromeMasque(pathname) || estOngletMoi(pathname)
   )
 }
 
@@ -120,12 +113,3 @@ export function isHudSerieMasquee(pathname: string): boolean {
   return pathname === '/reviser'
 }
 
-/**
- * LA PASTILLE DES QUÊTES DU JOUR (03/10/2026) vit dans le bandeau, sur tous les
- * écrans, accueil Réviser compris (la puce de classe en est descendue, à
- * droite de l'étoile de la grille). Seule exception : l'arène, où le bandeau se
- * masque et où la tuile Quêtes du rail ouvre la même feuille.
- */
-export function isHudQuetesMasquee(pathname: string): boolean {
-  return pathname === '/defi'
-}

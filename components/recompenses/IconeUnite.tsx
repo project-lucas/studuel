@@ -1,4 +1,5 @@
-import { Crown, Sparkles, Trophy } from 'lucide-react'
+import { Crown, Sparkles } from 'lucide-react'
+import TropheeIcone from '@/components/ui/TropheeIcone'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import type { UniteGain } from '@/lib/gains'
 import { cn } from '@/lib/utils'
@@ -35,11 +36,7 @@ export default function IconeUnite({
     )
   if (unite === 'trophee')
     return (
-      <Trophy
-        className={cn('size-4', className)}
-        strokeWidth={2.6}
-        aria-hidden="true"
-      />
+      <TropheeIcone className={cn('size-4', className)} />
     )
   return (
     <Sparkles

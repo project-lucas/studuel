@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils'
 import { useDialogFocus } from '@/lib/use-dialog'
 import { verrouillerDefilement } from '@/lib/scroll-lock'
 import RankBadge from '@/components/defi/RankBadge'
-import TropheeAnime from '@/components/amis/TropheeAnime'
+import TropheeIcone from '@/components/ui/TropheeIcone'
 import TrophyRules from '@/components/defi/TrophyRules'
 import { useDuelSubject } from '@/components/defi/DuelSubjectProvider'
 import { formatTrophees } from '@/components/defi/CompteTropheesArene'
@@ -284,7 +284,7 @@ function CarteMoi({
 
         <p className="flex shrink-0 flex-col items-end">
           <span className="flex items-center gap-1.5 font-mono text-3xl leading-none font-extrabold text-foreground tabular-nums">
-            <TropheeAnime className="size-7" />
+            <TropheeIcone className="size-7" />
             {formatTrophees(affiche)}
           </span>
           {classement?.rank ? (
@@ -412,7 +412,7 @@ function CarteMatiere({
 
         <p className="flex shrink-0 flex-col items-end gap-1">
           <span className="flex items-center gap-1 font-mono text-lg leading-none font-extrabold text-foreground tabular-nums">
-            <TropheeAnime className="size-5" />
+            <TropheeIcone className="size-5" />
             {entry.trophies}
           </span>
           {cible ? (

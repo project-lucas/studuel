@@ -11,7 +11,7 @@ import RythmeBarres from '@/components/moi/RythmeBarres'
 import ClassementAmis from '@/components/moi/ClassementAmis'
 import TrajectoryCard from '@/components/moi/TrajectoryCard'
 import FlammeAnimee from '@/components/FlammeAnimee'
-import TropheeAnime from '@/components/amis/TropheeAnime'
+import TropheeIcone from '@/components/ui/TropheeIcone'
 import type { Standing } from '@/lib/percentile'
 import {
   cadreClassement,
@@ -181,7 +181,7 @@ export default function EcranMoi({
         <div className={cn('carte', styles.tuile)}>
           <span className="surtitre">Trophées</span>
           <span className="mt-1.5 flex items-center gap-2">
-            <TropheeAnime className="size-[38px]" />
+            <TropheeIcone className="size-[38px]" />
             <span className={styles.grand}>{trophees.total.toLocaleString('fr-FR')}</span>
           </span>
           <span className="mt-1.5 text-xs font-semibold text-muted-foreground">
